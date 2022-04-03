@@ -4,7 +4,7 @@
   >
     <div class="container p-5">
       <h1 class="display-1">Politie info</h1>
-      <h2>Een React app met data representatie van api.politie.nl</h2>
+      <h2>Een Vue 3 app met data representatie van api.politie.nl</h2>
       <a href="#topmenu">
         <button type="button" class="my-3 mx-1 btn btn-primary">
           Bekijk info
@@ -33,6 +33,9 @@ export default {
   background-image: url("~@/assets/politie-big.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+.jumbotron {
+  margin-bottom: 0px;
 }
 .dark-box {
   background-color: rgba(60, 60, 60, 0.4);

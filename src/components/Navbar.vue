@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand text-light" href="#">Politieberichten</a>
     <button
-      class="navbar-toggler"
+      class="navbar-toggler text-light"
       type="button"
       data-toggle="collapse"
       data-target="#navbarSupportedContent"
@@ -17,7 +17,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#"
-            >Home <span class="sr-only">(current)</span></a
+            >Nieuws<span class="sr-only">(current)</span></a
           >
         </li>
         <li class="nav-item">
@@ -65,3 +65,12 @@ export default {
   name: "Navbar",
 };
 </script>
+<style>
+.navbar {
+  background-image: url("~@/assets/politie.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px;
+}
+</style>
+

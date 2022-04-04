@@ -15,15 +15,13 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Nieuws<span class="sr-only">(current)</span></a
-          >
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Gezochte personen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link text-light" href="#">Vermiste personen</a>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -40,10 +38,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+        </li> -->
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input
@@ -52,7 +47,7 @@
           placeholder="Search"
           aria-label="Search"
         />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <button class="btn btn-success my-2 my-sm-0" type="submit">
           Search
         </button>
       </form>

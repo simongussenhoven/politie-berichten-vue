@@ -35,6 +35,12 @@
 <script>
 export default {
   name: "NewsModal",
+  mounted () {
+  document.body.classList.add('modal-open')
+  },
+  beforeUnmount () {
+    document.body.classList.remove('modal-open', 'login')
+  },
   props: {
     displayed: {
       type: Boolean,

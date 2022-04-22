@@ -1,7 +1,13 @@
 <template>
   <main>
-    <h3 class="pt-3">Nieuwsberichten</h3>
-    <NewsFilter />
+    <h3 class="pt-3 text-center">Nieuwsberichten</h3>
+    <NewsFilter
+      :fromDate="fromDate"
+      :toDate="toDate"
+      :searchQuery="searchQuery"
+      @updateFromDate="updateFromDate"
+      @updateToDate="updateToDate"
+    />
     <div class="container">
       <ul class="news-list">
         <li v-for="item in newsItems" :key="item.uid">
@@ -14,7 +20,7 @@
       @close-modal="closeModal"
       :modalData="modalData"
     />
-    <MapContainer/>
+    <MapContainer />
   </main>
 </template>
 
@@ -22,7 +28,7 @@
 import NewsFilter from "./NewsFilter";
 import Newsitem from "./Newsitem.vue";
 import NewsModal from "./NewsModal.vue";
-import MapContainer from "./MapContainer.vue"
+import MapContainer from "./MapContainer.vue";
 
 export default {
   name: "News",
@@ -30,7 +36,7 @@ export default {
     Newsitem,
     NewsModal,
     NewsFilter,
-    MapContainer
+    MapContainer,
   },
   async created() {
     this.getNewsData();
@@ -44,6 +50,8 @@ export default {
       isLoading: true,
       showModal: false,
       modalData: {},
+      fromDate: "",
+      toDate: "",
       searchQuery: "",
     };
   },
@@ -68,6 +76,9 @@ export default {
       console.log("close modal!");
       this.showModal = false;
     },
+    updateFromDate(date) {
+      console.log(date)
+    }
   },
 };
 </script>

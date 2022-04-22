@@ -1,9 +1,9 @@
 <template>
   <div class="card d-flex flex-row shadow m-2 rounded">
-    <div class="image-container">
+    <div class="image-container p-0 col-sm-2">
       <img class="news-image" :src="getImage(item.afbeelding)" :alt="item.afbeelding.alttext" />
     </div>
-    <div class="text-left p-3 flex-column">
+    <div class="text-left p-3 flex-column col-sm-10">
       <h4>{{ item.titel }}</h4>
       <p class="text-muted">{{ item.publicatiedatum }}</p>
       <div v-html="item.introductie"></div>
@@ -48,6 +48,7 @@ export default {
   font-size: 12px;
 }
 .news-image {
-  object-fit: cover;
+  width: 100%;
 }
+
 </style>

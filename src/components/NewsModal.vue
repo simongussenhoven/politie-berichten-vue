@@ -15,7 +15,12 @@
           </button>
         </div>
         <div class="modal-body">
-          <p v-for="alinea, index in modalData.alineas" :key="index" v-html="alinea.opgemaaktetekst" class="text-left"></p>
+          <p
+            v-for="(alinea, index) in modalData.alineas"
+            :key="index"
+            v-html="alinea.opgemaaktetekst"
+            class="text-left"
+          ></p>
         </div>
         <div class="modal-footer">
           <button
@@ -35,11 +40,11 @@
 <script>
 export default {
   name: "NewsModal",
-  mounted () {
-  document.body.classList.add('modal-open')
+  mounted() {
+    document.body.classList.add("modal-open");
   },
-  beforeUnmount () {
-    document.body.classList.remove('modal-open', 'login')
+  beforeUnmount() {
+    document.body.classList.remove("modal-open", "login");
   },
   props: {
     displayed: {
@@ -49,13 +54,13 @@ export default {
     modalData: {
       type: Object,
       default: () => {},
-    }
+    },
   },
   methods: {
-      closeModal() {
-        console.log("close modal modal lever")
-        this.$emit("close-modal")
-      },
+    closeModal() {
+      console.log("close modal modal lever");
+      this.$emit("close-modal");
+    },
   },
 };
 </script>
